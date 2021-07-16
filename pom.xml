@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.abnamro.mail</groupId>
+    <artifactId>BA509_BankMailApplication</artifactId>
+    <version>3.0.57-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>com.abnamro.coesd</groupId>
+        <artifactId>master-pom</artifactId>
+        <version>3.1.0</version>
+    </parent>
+
+    <modules>
+        <module>BAI509_Implementation</module>
+    </modules>
+
+    <properties>
+        <application.systemletters>MAIL</application.systemletters>
+        <SharedStructuralUtils.version>4.0.4</SharedStructuralUtils.version>
+        <jackson-annotations.version>2.12.2</jackson-annotations.version>
+        <jackson-core.version>2.12.2</jackson-core.version>
+        <jackson-databind.version>2.12.2</jackson-databind.version>
+        <log4j2-impl.version>2.2.0</log4j2-impl.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.abnamro.genj</groupId>
+                <artifactId>SharedStructuralUtils</artifactId>
+                <version>${SharedStructuralUtils.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-databind.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.abnamro.genj</groupId>
+                <artifactId>log4j2-impl</artifactId>
+                <version>${log4j2-impl.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <scm>
+        <connection>scm:git:https://p-bitbucket.nl.eu.abnamro.com:7999/scm/mail/ba509_bankmailapplication.git
+        </connection>
+        <developerConnection>scm:git:https://p-bitbucket.nl.eu.abnamro.com:7999/scm/mail/ba509_bankmailapplication.git
+        </developerConnection>
+        <url>https://p-bitbucket.nl.eu.abnamro.com:7999/projects/MAIL/repos/ba509_bankmailapplication/browse</url>
+        <tag>HEAD</tag>
+    </scm>
+</project>
