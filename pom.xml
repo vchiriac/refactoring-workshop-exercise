@@ -6,11 +6,11 @@
     <version>3.0.57-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <parent>
+<!--    <parent>
         <groupId>com.abnamro.coesd</groupId>
         <artifactId>master-pom</artifactId>
         <version>3.1.0</version>
-    </parent>
+    </parent>-->
 
     <modules>
         <module>BAI509_Implementation</module>

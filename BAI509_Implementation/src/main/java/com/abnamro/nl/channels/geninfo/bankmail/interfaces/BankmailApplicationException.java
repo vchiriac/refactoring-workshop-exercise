@@ -1,8 +1,6 @@
 package com.abnamro.nl.channels.geninfo.bankmail.interfaces;
 
-import com.abnamro.nl.exceptions.AABException;
-import com.abnamro.nl.exceptions.BusinessApplicationException;
-import com.abnamro.nl.messages.Messages;
+import com.abnamro.nl.channels.geninfo.bankmail.util.Messages;
 
 /**
  * BankmailApplicationException
@@ -38,8 +36,8 @@ public class BankmailApplicationException extends BusinessApplicationException {
 	 * messages into the new exception.
 	 * @param aabException AABException
 	 */
-	public BankmailApplicationException(AABException aabException) {
-		super(aabException);
+	public <AABException> BankmailApplicationException(AABException aabException) {
+		super((Messages) aabException);
 	}
 
 }

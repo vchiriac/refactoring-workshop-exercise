@@ -1,9 +1,8 @@
 package com.abnamro.nl.channels.geninfo.bankmail.abpc.implementation;
 
-import com.abnamro.nl.messages.MessageKey;
 
 /**
- * BankmailABPCMessageKeys 
+ * BankmailABPCMessageKeys
  * Bankmail ASC layer Constants.
  * <PRE>
  * <B>History:</B>
@@ -11,7 +10,7 @@ import com.abnamro.nl.messages.MessageKey;
  * ------------------ ---------- ----------------- ----------------------------------------------
  * TCS			  	29-05-2012	Initial version	  Release 1.0
  * </PRE>
- * @author 
+ * @author
  * @see
  */
 public class BankmailABPCMessageKeys {
@@ -90,7 +89,7 @@ public class BankmailABPCMessageKeys {
 	public static final MessageKey ERROR_UNSUPPORTED_ENCODING_EXCEPTION = new MessageKey("MESSAGE_BAI509_5036");
 
 	/**
-	 * Tridion Message key : MESSAGE_BAI509_9000 
+	 * Tridion Message key : MESSAGE_BAI509_9000
 	 * Description : Error when technical exception occurs
 	 */
 	public static final MessageKey ERROR_TECHNICAL_EXCEPTION = new MessageKey("MESSAGE_BAI509_9000");
