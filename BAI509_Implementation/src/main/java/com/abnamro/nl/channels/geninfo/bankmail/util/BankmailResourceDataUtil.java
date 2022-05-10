@@ -164,7 +164,7 @@ public final class BankmailResourceDataUtil {
 	}
 
 	/**
-	 * This method reads the object data and converts it into JSON
+	 * This method reads the resource, converts it into object and put it to the cache.
 	 *
 	 * @param resourceFileName resource file String
 	 * @param key corresponding key String
@@ -185,6 +185,13 @@ public final class BankmailResourceDataUtil {
 		}
 	}
 
+	/**
+	 * Log and throw BankmailApplicationException.
+	 *
+	 * @param logMethod the method that logs the exception
+	 * @param e corresponding Exception
+	 * @throws BankmailApplicationException throws BankmailApplicationException
+	 */
 	private static void logAndThrow(String logMethod, Exception e) throws BankmailApplicationException {
 		LOGGER.error(logMethod, BankmailConstants.BANKMAIL_JSON_DATA_ISSUE, e);
 		Messages msgs = new Messages();
@@ -192,6 +199,14 @@ public final class BankmailResourceDataUtil {
 		throw new BankmailApplicationException(msgs);
 	}
 
+	/**
+	 * The parser method, converts data into object and put it to the cache.
+	 *
+	 * @param reader input stream
+	 * @param key corresponding key String
+	 * @param tagName String
+	 * @param clazz the class used by the converted object Class
+	 */
 	private static <T> void parseAndPut(InputStream reader, final String tagName, final String key, final Class<T> clazz) {
 		Gson gson = new GsonBuilder().create();
 		final var  jsonObject = gson.fromJson(new BufferedReader(new InputStreamReader(reader)), JsonObject.class);
