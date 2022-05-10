@@ -1,0 +1,5 @@
+- remove json parser and use gson library (fastest as of 2021)
+- removed all duplicated code for parsing, added one single generic method for JSON parsing
+- keep BankMailResourceDataUtil as a utility class, make all the methods private, except readJsons(String key)
+- single access method to all the parsers, based on the key: public static Object readJsons(String key)
+- add a test BankmailResourceDataUtilTest, which can test all the parser keys
